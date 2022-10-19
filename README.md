@@ -1,5 +1,4 @@
-# AGNES
-# The testable networking solution
+# AGNES: The testable networking solution
 
 ## License
 See license.md for default license terms.
