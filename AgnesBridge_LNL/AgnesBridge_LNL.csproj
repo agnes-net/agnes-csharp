@@ -10,4 +10,8 @@
     <PackageReference Include="LiteNetLib" Version="1.0.0-rc.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AgnesAbstraction\AgnesAbstraction.csproj" />
+  </ItemGroup>
+
 </Project>
