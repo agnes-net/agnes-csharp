@@ -2,7 +2,5 @@
 
 namespace AgnusAbstraction
 {
-    public class Class1
-    {
-    }
+
 }

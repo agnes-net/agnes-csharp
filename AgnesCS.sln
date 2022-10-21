@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgnusAbstraction", "AgnusAbstraction\AgnusAbstraction.csproj", "{B6D4A57E-985A-4A77-A99D-1A5C088E7BC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgnesAbstraction", "AgnesAbstraction\AgnesAbstraction.csproj", "{B6D4A57E-985A-4A77-A99D-1A5C088E7BC7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgnusBridge_LNL", "AgnusBridge_LNL\AgnusBridge_LNL.csproj", "{C39370D5-49F3-4FA9-B806-FFCC740B1584}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgnesBridge_LNL", "AgnesBridge_LNL\AgnesBridge_LNL.csproj", "{C39370D5-49F3-4FA9-B806-FFCC740B1584}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgnusTests", "AgnusTests\AgnusTests.csproj", "{CE6BF064-596B-4749-890A-C5FC8475D78B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgnesTests", "AgnesTests\AgnesTests.csproj", "{CE6BF064-596B-4749-890A-C5FC8475D78B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

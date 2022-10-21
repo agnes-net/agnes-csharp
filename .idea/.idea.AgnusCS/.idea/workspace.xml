@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4092a256-fb6e-4f7d-a2f7-a38068581412" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.AgnesCS/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.AgnusCS/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AgnesTests/Class1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AgnusCS/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AgnesCS/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AgnusCS/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AgnesCS/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AgnusCS/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AgnesCS/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AgnusCS/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AgnesCS/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgnusAbstraction/AgnusAbstraction.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AgnesAbstraction/AgnesAbstraction.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgnusAbstraction/Class1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AgnesAbstraction/Class1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgnusBridge_LNL/AgnusBridge_LNL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AgnesBridge_LNL/AgnesBridge_LNL.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgnusBridge_LNL/Class1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AgnesBridge_LNL/Class1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgnusCS.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AgnesCS.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgnusTests/AgnusTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AgnesTests/AgnesTests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgnusTests/Class1.cs" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/AgnesAbstraction/Class1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AgnesTests/Class1.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GQOKeaIwaVzpJO7DmnyilUU6Ee" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4092a256-fb6e-4f7d-a2f7-a38068581412" name="Changes" comment="" />
+      <created>1666317281487</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666317281487</updated>
+      <workItem from="1666317284805" duration="265000" />
+      <workItem from="1666317648605" duration="119000" />
+      <workItem from="1666317847562" duration="769000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
