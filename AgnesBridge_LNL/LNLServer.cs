@@ -70,7 +70,5 @@ public class LNLServer : IServer
 		OnConnectionRequestReceived.Invoke();
 
 		connRequest.Accept();
-
-		
 	}
 }

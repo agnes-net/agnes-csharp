@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
+using System.Threading;
 
 
 [TestFixture(typeof(LNLFactory))]
@@ -12,6 +13,8 @@ public class agnes_tests<T> where T : IFactory, new()
 
 	const string IP = "localhost";
 	const int PORT = 9050;
+
+    private const int LOOP_DELAY = 15;
     
     [SetUp]
     public void SetUp()
@@ -130,10 +133,12 @@ public class agnes_tests<T> where T : IFactory, new()
 		{
 			server.Poll();
 			client.Poll();
-
+            
 			counter++;
 
-			if (counter > 250)
+            Thread.Sleep(LOOP_DELAY);
+
+            if (counter > 250)
 				Assert.Fail("Wait timed out - hit maximum loop count");
 		}
         
@@ -145,11 +150,31 @@ public class agnes_tests<T> where T : IFactory, new()
     public void client_connection_callback_fires()
     {
         // Arrange
-
+        bool hasCallbackFired = false;
+        client.OnClientConnected += () => hasCallbackFired = true;
+        
         // Act
+        server.TryInitServer();
+        client.TryInitClient();
+        var hasClientConnected = client.TryConnect(IP, PORT);
+
+        int counter = 0;
+
+        while (hasClientConnected.IsCompleted == false)
+        {
+            server.Poll();
+            client.Poll();
+            
+            Thread.Sleep(LOOP_DELAY);
+
+            counter++;
+
+            if (counter > 250)
+                Assert.Fail("Wait timed out - hit maximum loop count");
+        }
         
         // Assert
-        Assert.Ignore();
+        Assert.True(hasCallbackFired);
     }
 
     [Test]

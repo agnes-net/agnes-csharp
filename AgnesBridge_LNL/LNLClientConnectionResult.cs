@@ -1,4 +1,6 @@
-﻿public class LNLClientConnectionResult : IDelayedResult<bool>
+﻿using System;
+
+public class LNLClientConnectionResult : IDelayedResult<bool>
 {
 	public bool IsCompleted => peer.ConnectionState != LiteNetLib.ConnectionState.Outgoing;
 

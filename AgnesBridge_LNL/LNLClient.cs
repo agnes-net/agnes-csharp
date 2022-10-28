@@ -1,4 +1,5 @@
 using System;
+using LiteNetLib;
 
 public class LNLClient : IClient
 {
@@ -46,6 +47,37 @@ public class LNLClient : IClient
 	{
 		var netPeer = netManager.Connect(ip, port, "agnes");
 		return new LNLClientConnectionResult(netPeer);
+	}
+
+	void ConnectionResultChange(NetPeer netPeer, NetPacketReader netPacketReader, byte channel, DeliveryMethod deliveryMethod)
+	{
+		bool isSetupMessage = netPacketReader.GetBool();
+
+		if (isSetupMessage)
+		{
+			TryReadSetupMessage(netPeer, netPacketReader);
+		}
+		else
+		{
+			ReadChannelledMessage(netPacketReader);
+		}
+	}
+
+	bool TryReadSetupMessage(NetPeer netPeer, NetPacketReader netPacketReader)
+	{
+		string serviceTunnel = netPacketReader.GetString();
+		bool isGuid = Guid.TryParse(serviceTunnel, out Guid serviceTunnelGUID);
+		if (!isGuid)
+			return false;
+		
+		
+		OnClientConnected.Invoke();
+		return true;
+	}
+	
+	void ReadChannelledMessage(NetPacketReader netPacketReader)
+	{
+		
 	}
 
 	public void ReceiveConnectionResponse()
