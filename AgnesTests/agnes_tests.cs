@@ -9,6 +9,9 @@ public class agnes_tests<T> where T : IFactory, new()
 
     private IServer server;
     private IClient client;
+
+	const string IP = "localhost";
+	const int PORT = 9050;
     
     [SetUp]
     public void SetUp()
@@ -21,7 +24,8 @@ public class agnes_tests<T> where T : IFactory, new()
     [TearDown]
     public void TearDown()
     {
-        
+		client.StopClient();
+		server.StopServer();
     }
 
     [Test]
@@ -46,10 +50,9 @@ public class agnes_tests<T> where T : IFactory, new()
         Assert.True(server.IsServerRunning);
 
         // Act
-        bool hasServerStopped = server.TryStopServer();
+        server.StopServer();
         
         // Assert
-        Assert.True(hasServerStopped);
         Assert.False(server.IsServerRunning);
     }
 
@@ -75,10 +78,9 @@ public class agnes_tests<T> where T : IFactory, new()
         Assert.True(client.IsClientRunning);
 
         // Act
-        bool hasClientStopped = client.TryStopClient();
+        client.StopClient();
         
         // Assert
-        Assert.True(hasClientStopped);
         Assert.False(client.IsClientRunning);
     }
 
@@ -86,22 +88,57 @@ public class agnes_tests<T> where T : IFactory, new()
     public void server_can_receive_connection_request()
     {
         // Arrange
+		server.TryInitServer();
+		client.TryInitClient();
 
-        // Act
+		// Act
+		var hasClientConnected = client.TryConnect(IP, PORT);
+
+		bool connRequestReceived = false;
+		server.OnConnectionRequestReceived += () => connRequestReceived = true;
+
+		int counter = 0;
+
+		while (connRequestReceived == false)
+		{
+			server.Poll();
+			client.Poll();
+
+			counter++;
+
+			if (counter > 250)
+				Assert.Fail("Wait timed out - hit maximum loop count");
+		}
         
         // Assert
-        Assert.Ignore();
+        Assert.True(connRequestReceived);
     }
 
     [Test]
     public void client_can_connect_to_server()
     {
         // Arrange
+		server.TryInitServer();
+		client.TryInitClient();
 
-        // Act
+		// Act
+		var hasClientConnected = client.TryConnect(IP, PORT);
+
+		int counter = 0;
+
+		while (hasClientConnected.IsCompleted == false)
+		{
+			server.Poll();
+			client.Poll();
+
+			counter++;
+
+			if (counter > 250)
+				Assert.Fail("Wait timed out - hit maximum loop count");
+		}
         
         // Assert
-        Assert.Ignore();
+        Assert.True(hasClientConnected.Result);
     }
 
     [Test]
